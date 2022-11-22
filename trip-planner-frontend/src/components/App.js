@@ -1,10 +1,9 @@
 import '../App.css';
 import React, {useState, useEffect} from 'react'
-import { Switch, Route, Link, useHistory } from "react-router-dom";
+import { Switch, Route} from "react-router-dom";
 import Home from './Home.js'
 import NavBar from './NavBar.js';
 import AttractionList from './AttractionList.js';
-import AttractionsForm from './AttractionsForm.js';
 
 function App() {
   const [attractionType, setAttractionType] = useState("")
@@ -13,7 +12,13 @@ function App() {
   const [dropdownValue, setDropdownValue] = useState("All")
 
   function onUpdateCities(newCity){
-    console.log(newCity)
+    // let newCities = [...availableCities, newCity]
+    // let uniqueCities = newCities.filter(city => {
+    //   const isDuplicate = newCities.includes(city.name)
+    //   if (!isDuplicate) return true
+    // })
+    // console.log(newCities)
+    // console.log(uniqueCities)
     setAvailableCities([...availableCities, newCity])
   }
 

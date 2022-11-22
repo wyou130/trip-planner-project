@@ -17,7 +17,6 @@ function ConcertItem({ attraction, handleDelete }) {
                         }
                         <p>Venue: {attraction.venue_name}</p>
                         <p>Venue Type: {attraction.venue_type}</p>
-                        {/* <div className='card-footer'> */}
                         <button 
                             className='btn btn-danger' 
                             onClick={() => handleDelete(attraction)}
