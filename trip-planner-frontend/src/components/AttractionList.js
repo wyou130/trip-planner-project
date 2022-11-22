@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import ConcertItem from './ConcertItem.js';
 import EateryItem from './EateryItem.js';
 import AttractionsForm from './AttractionsForm.js';
@@ -6,15 +6,11 @@ import AttractionsForm from './AttractionsForm.js';
 
 function AttractionList({availableCities, displayData, attractionType, onHandleChange, dropdownValue, onUpdateObject, onPost, onUpdateData, onUpdateCities}) {
 
-
-
     function handleChange(e) {
-        // console.log(e.target.value)
         onHandleChange(e.target.value)
     }
 
     function handleDelete(attraction) {
-        // console.log(attraction.id)
         fetch(`http://localhost:9292/${attractionType}/${attraction.id}`, {
             method: 'DELETE'
         })

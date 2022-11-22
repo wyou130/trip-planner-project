@@ -111,7 +111,6 @@ function AttractionsForm({ attractionType, onPost, onUpdateCities }) {
                             </div>
                         </div>
                         <br/>
-                        {/* concert form */}
                         <div className='form-group row'>
                             <label className='col-sm-2 col-form-label'>Venue</label>
                             <div className='col-sm-4'>
@@ -123,7 +122,6 @@ function AttractionsForm({ attractionType, onPost, onUpdateCities }) {
                             </div>
                         </div>
                         <br/>
-                        {/*band form*/}
                         <div className='form-group row'>
                             <label className='col-sm-2 col-form-label'>Band Name</label>
                             <div className='col-sm-4'>
@@ -164,7 +162,6 @@ function AttractionsForm({ attractionType, onPost, onUpdateCities }) {
                             </div>
                         </div>
                         <br/>
-                        {/*eatery form*/}
                         <div className='form-group row'>
                             <label className='col-sm-2 col-form-label'>Name</label>
                             <div className='col-sm-4'>
