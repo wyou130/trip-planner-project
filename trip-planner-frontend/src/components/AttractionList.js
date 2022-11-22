@@ -28,12 +28,12 @@ function AttractionList({availableCities, displayData, attractionType, onHandleC
 
     return (
         <div>
-            <select value={dropdownValue} onChange={handleChange}>
-                <option>All</option>
-                {availableCities.map((city)=> <option key={city.id} value={city.id}>{city.name}</option>)}
-            </select>
             <div className="container-fluid">
                 {attractionType === "concerts" ? <h3>Concerts</h3> : <h3>Eateries</h3>}
+                <select value={dropdownValue} onChange={handleChange}>
+                    <option>All</option>
+                    {availableCities.map((city)=> <option key={city.id} value={city.id}>{city.name}</option>)}
+                </select>
                 <div className="row">
                 {displayData.map((attraction) => 
                         attractionType === "concerts" ?

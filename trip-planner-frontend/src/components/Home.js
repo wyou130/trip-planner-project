@@ -16,13 +16,13 @@ function Home({attractionClick}) {
             <br></br>
             <div>
                 <Link exact="true" to="attractions">
-                    <button type="button" className="btn btn-primary" value="concerts" onClick={handleClick}>Ready to rock</button>
+                    <button type="button" className="btn btn-primary btn-lg" value="concerts" onClick={handleClick}>Ready to rock</button>
                 </Link>
             </div>
             <br></br>
             <div>
                 <Link exact="true" to="/attractions">
-                    <button className="btn btn-primary" value="eateries" onClick={handleClick}>Eager to eat</button>
+                    <button className="btn btn-primary btn-lg" value="eateries" onClick={handleClick}>Eager to eat</button>
                 </Link>
             </div>
         </div>
