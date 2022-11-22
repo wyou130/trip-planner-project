@@ -92,46 +92,93 @@ function AttractionsForm({ attractionType, onPost, onUpdateCities }) {
     
     return (
         <div>
-            {attractionType === "concerts" ? <h1>Add A Concert</h1> : <h1>Add An Eatery</h1>}
-                    {/*city form*/}
-
             {attractionType === "concerts" ?
+                <>
+                    <h3>Add A Concert</h3>
                     <form onSubmit={submitNewCity}>
-                        <label>City</label>
-                        <input placeholder="City Name" type="text" name="city" onChange={(e)=>setCityNameForm(e.target.value)} value={cityNameForm}/>
-                        <label>State</label>
-                        <input placeholder="State Initial" type="text" name="state" onChange={(e)=>setStateNameForm(e.target.value)}value={stateNameForm}/>
+                        <div className='form-group row'>
+                            <label className='col-sm-2 col-form-label'>City</label>
+                            <div className='col-sm-3'>
+                                <input placeholder="City Name" type="text" name="city" onChange={(e)=>setCityNameForm(e.target.value)} value={cityNameForm} className='form-control'/>
+                            </div>
+                            <label className='col-sm-1 col-form-label'>State</label>
+                            <div className='col-sm-2'>
+                                <input placeholder="State Initial" type="text" name="state" onChange={(e)=>setStateNameForm(e.target.value)}value={stateNameForm} className='form-control'/>
+                            </div>
+                            <label className='col-sm-1 col-form-label'>Date</label>
+                            <div className='col-sm-2'>
+                                <input placeholder="Date" type="text" name="Date" onChange={(e) => setConcertDate(e.target.value)} value={concertDate} className='form-control'/>
+                            </div>
+                        </div>
+                        <br/>
                         {/* concert form */}
-                        <label>Date</label>
-                        <input placeholder="Date" type="text" name="Date" onChange={(e) => setConcertDate(e.target.value)} value={concertDate}/>
-                        <label>Venue</label>
-                        <input placeholder="Venue Name" type="text" name="Venue" onChange={(e)=>setVenueName(e.target.value)} value={venueName}/>
-                        <label>Venue Type</label>
-                        <input placeholder="Arena, Medium, Local?" type="text" name="Venue Type"onChange={(e)=>setVenueType(e.target.value)} value={venueType}/>
+                        <div className='form-group row'>
+                            <label className='col-sm-2 col-form-label'>Venue</label>
+                            <div className='col-sm-4'>
+                                <input placeholder="Venue Name" type="text" name="Venue" onChange={(e)=>setVenueName(e.target.value)} value={venueName} className='form-control'/>
+                            </div>
+                            <label className='col-sm-2 col-form-label'>Venue Type</label>
+                            <div className='col-sm-3'>
+                                <input placeholder="Arena, Medium, Local?" type="text" name="Venue Type"onChange={(e)=>setVenueType(e.target.value)} value={venueType} className='form-control'/>
+                            </div>
+                        </div>
+                        <br/>
                         {/*band form*/}
-                        <label>Band Name</label>
-                        <input placeholder="Band/Artist Name" type="text" name="name"onChange={(e)=>setBandName(e.target.value)} value={bandName}/>
-                        <label>Genre</label>
-                        <input placeholder="Genre" type="text" name="genre"onChange={(e)=>setGenre(e.target.value)} value={genre}/>
-                        <input type="submit" />
+                        <div className='form-group row'>
+                            <label className='col-sm-2 col-form-label'>Band Name</label>
+                            <div className='col-sm-4'>
+                                <input placeholder="Band/Artist Name" type="text" name="name"onChange={(e)=>setBandName(e.target.value)} value={bandName} className='form-control'/>
+                            </div>
+                            <label className='col-sm-1 col-form-label'>Genre</label>
+                            <div className='col-sm-4'>
+                                <input placeholder="Genre" type="text" name="genre"onChange={(e)=>setGenre(e.target.value)} value={genre} className='form-control'/>
+                            </div>
+                        </div>
+                        <br/>
+                        <input type="submit" className='btn btn-primary'/>
                     </form>
-                    :
+                </>
+                :
+                <>
+                    <h3>Add An Eatery</h3>
                     <form onSubmit={submitNewCity}>
-                        <label>City</label>
-                        <input placeholder="City Name" type="text" name="city" onChange={(e)=>setCityNameForm(e.target.value)} value={cityNameForm}/>
-                        <label>State</label>
-                        <input placeholder="State Initial" type="text" name="state" onChange={(e)=>setStateNameForm(e.target.value)} value={stateNameForm}/>
+                        <div className='form-group row'>
+                            <label className='col-sm-2 col-form-label'>City</label>
+                            <div className='col-sm-3'>
+                                <input placeholder="City Name" type="text" name="city" onChange={(e)=>setCityNameForm(e.target.value)} value={cityNameForm} className='form-control'/>
+                            </div>
+                            <label className='col-sm-1 col-form-label'>State</label>
+                            <div className='col-sm-2'>
+                                <input placeholder="State Initial" type="text" name="state" onChange={(e)=>setStateNameForm(e.target.value)} value={stateNameForm} className='form-control'/>
+                            </div>
+                            <label className='col-sm-1 col-form-label'>Downtown?</label>
+                            <div className='col-sm-2'>
+                                <input placeholder="true or false" type="text" name="downtown?"onChange={(e)=>setDowntown(e.target.value)} value={downtown} className='form-control'/>
+                            </div>
+                        </div>
+                        <br/>
+                        <div className='form-group row'>
+                            <label className='col-sm-2 col-form-label'>Address</label>
+                            <div className='col-sm-9'>
+                                <input placeholder="Address" type="text" name="Address"onChange={(e)=>setAddress(e.target.value)} value={address} className='form-control'/>
+                            </div>
+                        </div>
+                        <br/>
                         {/*eatery form*/}
-                        <label>Name</label>
-                        <input placeholder="Eatery Name" type="text" name="Name"onChange={(e)=>setEateryName(e.target.value)} value={eateryName}/>
-                        <label>Downtown?</label>
-                        <input placeholder="true or false" type="text" name="downtown?"onChange={(e)=>setDowntown(e.target.value)} value={downtown}/>
-                        <label>Cuisine Type</label>
-                        <input placeholder="Cuisine Type" type="text" name="cuisine type"onChange={(e)=>setCuisineType(e.target.value)} value={cuisineType}/>
-                        <label>Address</label>
-                        <input placeholder="Address" type="text" name="Address"onChange={(e)=>setAddress(e.target.value)} value={address}/>
-                        <input type="submit" />
+                        <div className='form-group row'>
+                            <label className='col-sm-2 col-form-label'>Name</label>
+                            <div className='col-sm-4'>
+                                <input placeholder="Eatery Name" type="text" name="Name"onChange={(e)=>setEateryName(e.target.value)} value={eateryName} className='form-control'/>
+                            </div>
+                            <label className='col-sm-2 col-form-label'>Cuisine Type</label>
+                            <div className='col-sm-3'>
+                                <input placeholder="Cuisine Type" type="text" name="cuisine type"onChange={(e)=>setCuisineType(e.target.value)} value={cuisineType} className='form-control'/>
+                            </div>
+                        </div>
+                        <br/>
+                        <input type="submit" className='btn btn-primary'/>
                     </form>
+                </>
             }
         </div>
     )
