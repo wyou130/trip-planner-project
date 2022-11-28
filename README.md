@@ -83,5 +83,11 @@ npm start
 ## Team
 
 **Jake Dapper**
+- [Profile](https://github.com/jakedapper)
+- [LinkedIn](https://www.linkedin.com/in/jacobdapper/)
+- [Blog](https://dev.to/jakedapper)
 
 **Wendy You**
+- [Profile](https://github.com/wyou130)
+- [LinkedIn](https://www.linkedin.com/in/wendy-you/)
+- [Blog](https://medium.com/@wyou130)
